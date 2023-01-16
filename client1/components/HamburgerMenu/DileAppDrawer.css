@@ -1,0 +1,67 @@
+      :host {
+        display         : block;
+        }
+
+      .modal {
+        display         : none;
+        position        : fixed;
+        width           : 100vw;
+        height          : 100vh;
+        top             : 0;
+        left            : 0;
+        z-index         : var(--dile-app-drawer-modal-z-index, var(--dile-app-drawer-z-index, 10000));
+        opacity         : 0;
+        transition      : opacity 0.3s ease;
+        background-color: var(--dile-app-drawer-modal-background-color, rgba(20, 20, 20, 0.7) );
+        }
+
+      .menu {
+        position        : fixed;
+        box-sizing      : border-box;
+        z-index         : var(--dile-app-drawer-z-index, 10000);
+        background-color: var(--dile-app-drawer-background-color, #ddd);
+        transition      : transform 0.3s ease;
+        overflow        : auto;
+        }
+
+      section {
+        transform       : translateX(-100vw);
+        transition      : transform 0.2s ease 0.3s;
+        }
+
+      :host([opened]) .modal {
+        display         : block;
+        opacity         : 1;
+        }
+
+      :host([opened]) .menu {
+        display         : block;
+        }
+
+      :host([opened]) section {
+        transform       : translateX(0);
+        }
+
+      :host([direction="top"]) .menu {
+        top             : var(--dile-app-drawer-closed-top, -100vh);
+        left            : var(--dile-app-drawer-closed-left, 0);
+        height          : var(--dile-app-drawer-content-height, auto);
+        width           : var(--dile-app-drawer-content-width, 100vw);
+        box-shadow      : var(--dile-app-drawer-box-shadow, 0 1px 8px #000);
+        }
+
+      :host([direction="left"]) .menu {
+        top             : var(--dile-app-drawer-closed-top, 0);
+        left            : var(--dile-app-drawer-closed-left, -100vw);
+        height          : var(--dile-app-drawer-content-height, 100vh);
+        width           : var(--dile-app-drawer-content-width, auto);
+        box-shadow      : var(--dile-app-drawer-box-shadow, 1px 0 8px #000);
+        }
+
+      :host([direction="top"][opened]) .menu {
+        transform       : translateY(100vh);
+        }
+
+      :host([direction="left"][opened]) .menu {
+        transform       : translateX(100vw);
+        }

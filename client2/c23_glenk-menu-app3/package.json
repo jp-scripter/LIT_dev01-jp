@@ -1,0 +1,23 @@
+{
+  "name": "1c21_hamburger-menu",
+  "version": "0.01.010",
+  "author": "Robin Mattern",
+  "license": "ISC",
+  "dependencies": {},
+  "scripts": {
+    "start1": "web-dev-server --node-resolve --open index_u1.html --watch",
+    "start2": "web-dev-server --node-resolve --open index_u2.html --watch"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

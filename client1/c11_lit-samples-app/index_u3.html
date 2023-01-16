@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>c11_u3. Lit Hamburger Menu</title>
+
+<!--<script type="module" src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js?module"></script> --><!-- works, but not necessary -->
+
+<!--<script type="module"     src="../components/Menus/Menus.mjs"></script> --><!-- works with Live Server -->
+<!--<script type="module"> import "../components/Menus/Menus.mjs"           --><!-- works, but I changed the name -->
+    <script type="module"> import "../components/HeaderMenus/index.mjs" 
+    </script><!-- if not on a seperate line, syntax coloring get messed up -->
+
+    <script type="module"     src="../components/HamburgerMenu/index.mjs"></script> 
+    <script type="module"     src="../components/Footer/inc-footer.mjs"></script> 
+
+</head>
+<body>
+
+  <header-menus style="position: relative; top: 5px;"></header-menus>
+  <inc-footer></inc-footer>
+  <hamburger-menu page="Members"/>
+
+  
+  <!------------------------------------------------------->  
+
+</body>
+</html>
